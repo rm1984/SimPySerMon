@@ -1,0 +1,39 @@
+hosts:
+  - host: Test
+    ip: 127.0.0.1
+    fqdn: localhost
+    services:
+      ssh:
+        port: 22
+        protocol: tcp
+      http:
+        port: 80
+        protocol: tcp
+  - host: Google DNS
+    ip: 8.8.8.8
+    fqdn: dns.google
+    services:
+      dns:
+        port: 53
+        protocol: udp
+  - host: Google
+    #ip: 142.251.209.36
+    fqdn: www.google.com
+    services:
+      http:
+        port: 80
+        protocol: tcp
+      https:
+        port: 443
+        protocol: tcp
+  - host: Int. Scene Org.
+    fqdn: ftp.scene.org
+    services:
+      ftp:
+        port: 21
+        protocol: tcp
+      https:
+        port: 443
+        protocol: tcp
+config:
+  timeout: 5
